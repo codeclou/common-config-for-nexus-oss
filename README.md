@@ -72,6 +72,18 @@ You can use that in your `~/.m2/settings.xml` like so:
 </settings>
 ```
 
+
+-----
+
+&nbsp;
+
+### Todo
+
+ * Docker Hub Proxy `createDockerProxy(String name, String remoteUrl...)`
+ * Npmjs.com Proxy `createNpmProxy(String name, String remoteUrl)`
+ * Python `createPyPiProxy(String name, String remoteUrl)`
+ * Ruby `createRubygemsProxy(String name, String remoteUrl)`
+
 -----
 
 &nbsp;
