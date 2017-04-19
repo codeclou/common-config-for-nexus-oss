@@ -1,0 +1,12 @@
+comment='this is Groovy syntax which will be transformed to a one liner!';
+
+List<String> repositoryNames = new ArrayList<String>();
+
+{% for proxyRepository in proxyRepositories %}
+    repository.createMavenProxy('{{ proxyRepository.name }}', '{{ proxyRepository.url }}');
+    repositoryNames.add('{{ proxyRepository.name }}');
+{% endfor %}
+
+repositoryNames.add('maven-central');
+repositoryNames.add('maven-public');
+repository.createMavenGroup('all', repositoryNames);

@@ -13,8 +13,15 @@ To run the bash scripts provided by this repo you need to provide the following 
 At best put the in your `~/.bashrc`
 
 ```bash
-export NEXUS_BASE_URL="http://localhost:8080" # base URL to Nexus OSS
-export NEXUS_AUTH="admin:admin123"            # username + password
+export NEXUS_BASE_URL="http://nexus.home.codeclo.io:8333" # base URL to Nexus OSS
+export NEXUS_AUTH="admin:admin123"                        # username + password
+```
+
+Have shinto-cli and python installed.
+
+```bash
+pip install shinto-cli
+j2 --version
 ```
 
 -----
@@ -27,16 +34,43 @@ There are several scripts for different purposes.
 
 **(1) Maven Proxy Repositories**
 
-To create Maven Proxy Repositories as defined in [`proxy-repositories.txt`](https://github.com/codeclou/common-config-for-nexus-oss/blob/master/maven/proxy-repositories.txt) run:
+To create Maven Proxy Repositories as defined in [`proxy-repositories.csv`](https://github.com/codeclou/common-config-for-nexus-oss/blob/master/maven/proxy-repositories.csv) run:
 
 ```bash
+#
+# CLONE
+#
 git clone https://github.com/codeclou/common-config-for-nexus-oss.git
-cd common-config-for-nexus-oss
-cd maven
+cd common-config-for-nexus-oss/maven
+
+#
+# CREATE PROXY REPOSITORIES
+#
 bash create-proxy-repositories.sh
 ```
 
 <p align="center"><img src="https://codeclou.github.io/common-config-for-nexus-oss/created-maven-proxy-repositories.png?v22" width="80%" /></p>
+
+Now you have a **Repository Group called 'all'** with URL: `http://nexus.home.codeclo.io:8333/repository/all/`
+
+You can use that in your `~/.m2/settings.xml` like so:
+
+
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <mirrors>
+    <mirror>
+      <mirrorOf>*</mirrorOf>
+      <name>remote-repos</name>
+      <id>remote-repos</id>
+      <url>http://nexus.home.codeclo.io:8333/repository/all/</url>      
+    </mirror>
+  </mirrors>
+</settings>
+```
 
 -----
 

@@ -1,0 +1,44 @@
+{
+  "proxyRepositories": [
+    {
+      "name": "atlassian-public",
+      "url": "https://maven.atlassian.com/public/"
+    },
+    {
+      "name": "atlassian-public-snapshots",
+      "url": "https://maven.atlassian.com/public/"
+    },
+    {
+      "name": "atlassian-3rdparty",
+      "url": "https://maven.atlassian.com/3rdparty/"
+    },
+    {
+      "name": "apache",
+      "url": "https://repo.maven.apache.org/maven2/"
+    },
+    {
+      "name": "apache-releases",
+      "url": "https://repository.apache.org/content/repositories/releases/"
+    },
+    {
+      "name": "spring-release",
+      "url": "https://repo.spring.io/release"
+    },
+    {
+      "name": "spring-milestone",
+      "url": "https://repo.spring.io/milestone"
+    },
+    {
+      "name": "spring-snapshot",
+      "url": "https://repo.spring.io/snapshot"
+    },
+    {
+      "name": "java-net",
+      "url": "https://maven.java.net/content/groups/public/"
+    },
+    {
+      "name": "jenkins-public",
+      "url": "https://repo.jenkins-ci.org/public/"
+    }
+  ]
+}
