@@ -1,0 +1,4 @@
+*.iml
+.idea
+home
+maven/_tmp.create-proxy-repositories.json
