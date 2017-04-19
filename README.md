@@ -36,6 +36,8 @@ cd maven
 bash create-proxy-repositories.sh
 ```
 
+<p align="center"><img src="https://codeclou.github.io/common-config-for-nexus-oss/created-maven-proxy-repositories.png" width="80%" /></p>
+
 -----
 
 &nbsp;
