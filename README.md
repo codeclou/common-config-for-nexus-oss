@@ -34,7 +34,7 @@ There are several scripts for different purposes.
 
 **(1) Maven Proxy Repositories**
 
-To create Maven Proxy Repositories as defined in [`proxy-repositories.csv`](https://github.com/codeclou/common-config-for-nexus-oss/blob/master/maven/proxy-repositories.csv) run:
+To create Maven Proxy Repositories as defined in [`proxy-repositories.json`](https://github.com/codeclou/common-config-for-nexus-oss/blob/master/maven/proxy-repositories.json) run:
 
 ```bash
 #
