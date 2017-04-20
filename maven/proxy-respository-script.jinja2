@@ -6,7 +6,7 @@ comment='this is Groovy syntax with a little Jinja2 templating foo which will be
 List<String> repositoryNames = new ArrayList<String>();
 
 {% for proxyRepository in proxyRepositories %}
-    repository.createMavenProxy('{{ proxyRepository.name }}', '{{ proxyRepository.url }}', 'default', true, VersionPolicy.MIXED, LayoutPolicy.STRICT);
+    repository.createMavenProxy('{{ proxyRepository.name }}', '{{ proxyRepository.url }}', 'default', true, VersionPolicy.MIXED, LayoutPolicy.PERMISSIVE);
     repositoryNames.add('{{ proxyRepository.name }}');
 {% endfor %}
 

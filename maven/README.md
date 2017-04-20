@@ -20,7 +20,7 @@ Example Groovy:
 import org.sonatype.nexus.repository.maven.LayoutPolicy;
 import org.sonatype.nexus.repository.maven.VersionPolicy;
 
-repository.createMavenProxy('atlassian-snapshot', 'https://maven.atlassian.com/public-snapshot/', 'default', true, VersionPolicy.MIXED, LayoutPolicy.STRICT);
+repository.createMavenProxy('atlassian-snapshot', 'https://maven.atlassian.com/public-snapshot/', 'default', true, VersionPolicy.MIXED, LayoutPolicy.PERMISSIVE);
 ```
 
 
