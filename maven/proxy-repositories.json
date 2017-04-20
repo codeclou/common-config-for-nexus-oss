@@ -7,6 +7,13 @@
       "docUrl": "https://developer.atlassian.com/docs/advanced-topics/working-with-maven/atlassian-maven-repositories"
     },
     {
+      "name": "codeclou-maven-repository-common",
+      "url": "https://codeclou.github.io/maven-repository-common/maven2/",
+      "docComment": "includes rare jars like jta:jta:1.0.1:jar",
+      "docUrl": "https://github.com/codeclou/maven-repository-common/"
+    },
+    
+    {
       "name": "apache",
       "url": "https://repo.maven.apache.org/maven2/"
     },
