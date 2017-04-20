@@ -1,16 +1,10 @@
 {
   "proxyRepositories": [
     {
-      "name": "atlassian-public",
-      "url": "https://maven.atlassian.com/public/"
-    },
-    {
-      "name": "atlassian-public-snapshot",
-      "url": "https://maven.atlassian.com/public-snapshot/"
-    },
-    {
-      "name": "atlassian-3rdparty",
-      "url": "https://maven.atlassian.com/3rdparty/"
+      "name": "atlassian-public-proxy",
+      "url": "https://maven.atlassian.com/repository/public",
+      "docComment": "includes 3rdparty and snapshots",
+      "docUrl": "https://developer.atlassian.com/docs/advanced-topics/working-with-maven/atlassian-maven-repositories"
     },
     {
       "name": "apache",
