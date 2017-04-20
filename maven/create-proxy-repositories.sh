@@ -11,11 +11,11 @@ set -e
 JSON_PREFIX='{ "name": "create-proxy-repositories", "type": "groovy", "content": "'
 JSON_POSTFIX='" }'
 GROOVY_SCRIPT_ONE_LINER=$(j2 proxy-respository-script.jinja2 proxy-repositories.json | tr '\n' ' ')
-echo $JSON_PREFIX$GROOVY_SCRIPT_ONE_LINER$JSON_POSTFIX > _tmp.create-proxy-repositories.json
+echo $JSON_PREFIX$GROOVY_SCRIPT_ONE_LINER$JSON_POSTFIX > .tmp.create-proxy-repositories.json
 
 echo "==================================="
 echo "SCRIPT TO CREATE PROXY REPOS AND REPO GROUP:"
-cat _tmp.create-proxy-repositories.json
+cat .tmp.create-proxy-repositories.json
 echo "==================================="
 
 
@@ -28,7 +28,7 @@ curl -v \
     -u $NEXUS_AUTH \
     --header "Content-Type: application/json" \
     "${NEXUS_BASE_URL}/service/siesta/rest/v1/script" \
-    -d @./_tmp.create-proxy-repositories.json
+    -d @./.tmp.create-proxy-repositories.json
 
 #
 # RUN

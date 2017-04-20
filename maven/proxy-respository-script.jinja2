@@ -1,9 +1,12 @@
-comment='this is Groovy syntax which will be transformed to a one liner!';
+import org.sonatype.nexus.repository.maven.LayoutPolicy;
+import org.sonatype.nexus.repository.maven.VersionPolicy;
+
+comment='this is Groovy syntax with a little Jinja2 templating foo which will be transformed to a one liner! Do not add Comments or other stuff that breaks the one line syntax! That is why we use semicolons. And also because we are a fan of semicolons...';
 
 List<String> repositoryNames = new ArrayList<String>();
 
 {% for proxyRepository in proxyRepositories %}
-    repository.createMavenProxy('{{ proxyRepository.name }}', '{{ proxyRepository.url }}');
+    repository.createMavenProxy('{{ proxyRepository.name }}', '{{ proxyRepository.url }}', 'default', true, VersionPolicy.MIXED, LayoutPolicy.STRICT);
     repositoryNames.add('{{ proxyRepository.name }}');
 {% endfor %}
 

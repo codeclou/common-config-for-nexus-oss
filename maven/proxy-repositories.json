@@ -5,8 +5,8 @@
       "url": "https://maven.atlassian.com/public/"
     },
     {
-      "name": "atlassian-public-snapshots",
-      "url": "https://maven.atlassian.com/public/"
+      "name": "atlassian-public-snapshot",
+      "url": "https://maven.atlassian.com/public-snapshot/"
     },
     {
       "name": "atlassian-3rdparty",
