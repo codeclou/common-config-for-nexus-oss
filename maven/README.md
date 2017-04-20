@@ -12,7 +12,7 @@ public Repository createMavenProxy(String name, String remoteUrl, String blobSto
  * VersionPolicy: `release, snapshot, mixed`
  * LayoutPolicy: `strict, permissive`
  * blobStoreName: `default`
- * strictContentTypeValidation: `true`
+ * strictContentTypeValidation: `false` = we need this, so that abstract pom types can be downloaded
 
 Example Groovy:
 
@@ -20,7 +20,7 @@ Example Groovy:
 import org.sonatype.nexus.repository.maven.LayoutPolicy;
 import org.sonatype.nexus.repository.maven.VersionPolicy;
 
-repository.createMavenProxy('atlassian-snapshot', 'https://maven.atlassian.com/public-snapshot/', 'default', true, VersionPolicy.MIXED, LayoutPolicy.PERMISSIVE);
+repository.createMavenProxy('atlassian-snapshot', 'https://maven.atlassian.com/public-snapshot/', 'default', false, VersionPolicy.MIXED, LayoutPolicy.PERMISSIVE);
 ```
 
 
