@@ -13,7 +13,7 @@ To run the bash scripts provided by this repo you need to provide the following 
 At best put the in your `~/.bashrc`
 
 ```bash
-export NEXUS_BASE_URL="http://nexus.home.codeclo.io:8333" # base URL to Nexus OSS
+export NEXUS_BASE_URL="http://nexus.home.codeclou.io:8333" # base URL to Nexus OSS
 export NEXUS_AUTH="admin:admin123"                        # username + password
 ```
 
@@ -51,7 +51,7 @@ bash create-proxy-repositories.sh
 
 <p align="center"><img src="https://codeclou.github.io/common-config-for-nexus-oss/created-maven-proxy-repositories.png?v22" width="80%" /></p>
 
-Now you have a **Repository Group called 'all'** with URL: `http://nexus.home.codeclo.io:8333/repository/all/`
+Now you have a **Repository Group called 'all'** with URL: `http://nexus.home.codeclou.io:8333/repository/all/`
 
 You can use that in your `~/.m2/settings.xml` like so:
 
@@ -66,7 +66,7 @@ You can use that in your `~/.m2/settings.xml` like so:
       <mirrorOf>*</mirrorOf>
       <name>remote-repos</name>
       <id>remote-repos</id>
-      <url>http://nexus.home.codeclo.io:8333/repository/all/</url>      
+      <url>http://nexus.home.codeclou.io:8333/repository/all/</url>      
     </mirror>
   </mirrors>
 </settings>
