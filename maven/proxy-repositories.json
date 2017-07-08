@@ -40,6 +40,10 @@
     {
       "name": "jenkins-public",
       "url": "https://repo.jenkins-ci.org/public/"
+    },
+    {
+      "name": "frontend-maven-plugin",
+      "url": "https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/"
     }
   ]
 }
