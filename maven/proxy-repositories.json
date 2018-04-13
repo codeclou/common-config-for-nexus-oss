@@ -1,9 +1,15 @@
 {
   "proxyRepositories": [
     {
-      "name": "atlassian-public-proxy",
-      "url": "https://maven.atlassian.com/repository/public",
-      "docComment": "includes 3rdparty and snapshots",
+      "name": "atlassian-public",
+      "url": "https://packages.atlassian.com/maven/repository/public",
+      "docComment": "includes releases",
+      "docUrl": "https://developer.atlassian.com/docs/advanced-topics/working-with-maven/atlassian-maven-repositories"
+    },
+    {
+      "name": "atlassian-public-3rdparty",
+      "url": "https://packages.atlassian.com/maven/repository/3rdparty",
+      "docComment": "includes 3rdparty",
       "docUrl": "https://developer.atlassian.com/docs/advanced-topics/working-with-maven/atlassian-maven-repositories"
     },
     {
