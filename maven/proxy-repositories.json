@@ -50,6 +50,10 @@
     {
       "name": "frontend-maven-plugin",
       "url": "https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/"
-    }
+    },
+    {
+      "name": "groovy",
+      "url": "https://dl.bintray.com/groovy/maven/"
+    }    
   ]
 }
