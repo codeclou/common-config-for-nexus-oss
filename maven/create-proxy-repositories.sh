@@ -27,7 +27,7 @@ curl -v \
     -X POST \
     -u $NEXUS_AUTH \
     --header "Content-Type: application/json" \
-    "${NEXUS_BASE_URL}/service/siesta/rest/v1/script" \
+    "${NEXUS_BASE_URL}/service/rest/v1/script" \
     -d @./.tmp.create-proxy-repositories.json
 
 #
@@ -37,7 +37,7 @@ curl -v \
     -X POST \
     -u $NEXUS_AUTH \
     --header "Content-Type: text/plain" \
-    "${NEXUS_BASE_URL}/service/siesta/rest/v1/script/create-proxy-repositories/run"
+    "${NEXUS_BASE_URL}/service/rest/v1/script/create-proxy-repositories/run"
 
 #
 # CLEANUP
@@ -45,4 +45,4 @@ curl -v \
 curl -v \
     -X DELETE \
     -u $NEXUS_AUTH \
-    "${NEXUS_BASE_URL}/service/siesta/rest/v1/script/create-proxy-repositories"
+    "${NEXUS_BASE_URL}/service/rest/v1/script/create-proxy-repositories"
