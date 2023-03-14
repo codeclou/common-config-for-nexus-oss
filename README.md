@@ -1,3 +1,7 @@
+:mega: **End of Lifetime Notice**: We no longer provide support for this repository. It will be made readonly, you can still fork it and adapt it to your needs.
+
+----
+
 # common-config-for-nexus-oss
 
 A set of REST API scripts to configure your [Sonatype Nexus Repository Manager OSS](https://www.sonatype.com/nexus-repository-oss)  after initial setup.
